@@ -1,0 +1,254 @@
+.developer-page {
+  min-height: 100vh;
+  padding: 24px 20px 40px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 28%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 24%),
+    #f8fafc;
+}
+
+.developer-backdrop {
+  position: fixed;
+  z-index: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.developer-backdrop-one {
+  top: 110px;
+  left: -60px;
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.developer-backdrop-two {
+  right: -70px;
+  bottom: 120px;
+  background: rgba(14, 165, 233, 0.14);
+}
+
+.developer-hero,
+.developer-workspace {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.developer-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 28px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #dbe3ef;
+  border-radius: 20px;
+}
+
+.developer-eyebrow,
+.developer-panel-kicker {
+  margin: 0 0 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.developer-hero h1 {
+  margin: 0 0 12px;
+  max-width: 720px;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+}
+
+.developer-subtitle {
+  max-width: 720px;
+  margin: 0;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.developer-stats {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.developer-stat-card,
+.developer-panel {
+  background-color: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 16px;
+}
+
+.developer-stat-card {
+  padding: 18px;
+}
+
+.developer-stat-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.developer-stat-card strong {
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.developer-workspace {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.developer-editor-panel {
+  flex: 1 1 68%;
+  min-width: 0;
+  padding: 22px;
+}
+
+.developer-chat-panel {
+  flex: 0 0 360px;
+  min-width: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.developer-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.developer-panel-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+.developer-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.developer-editor-shell,
+.developer-output-shell,
+.developer-chat-shell {
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.developer-editor-shell {
+  margin-bottom: 18px;
+}
+
+.developer-editor-shell .editor-wrapper {
+  border: none;
+  border-radius: 0;
+}
+
+.developer-output-shell .output-panel {
+  padding: 16px;
+}
+
+.developer-output-shell .output-box {
+  min-height: 220px;
+}
+
+.developer-chat-shell {
+  flex: 1;
+  min-height: 760px;
+}
+
+.developer-chat-shell .app-shell,
+.developer-chat-shell .chat-window {
+  min-height: 760px;
+  height: 100%;
+}
+
+.developer-chat-shell .chat-window {
+  border: none;
+  border-radius: 0;
+}
+
+.developer-editor-panel .language-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.developer-editor-panel .language-selector select {
+  min-width: 170px;
+}
+
+@media (max-width: 1100px) {
+  .developer-hero,
+  .developer-workspace {
+    flex-direction: column;
+  }
+
+  .developer-stats,
+  .developer-chat-panel {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .developer-chat-shell,
+  .developer-chat-shell .app-shell,
+  .developer-chat-shell .chat-window {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 720px) {
+  .developer-page {
+    padding: 16px 14px 28px;
+  }
+
+  .developer-hero,
+  .developer-editor-panel,
+  .developer-chat-panel {
+    padding: 18px;
+  }
+
+  .developer-panel-header,
+  .developer-editor-panel .language-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .developer-chat-shell,
+  .developer-chat-shell .app-shell,
+  .developer-chat-shell .chat-window {
+    min-height: 540px;
+  }
+}

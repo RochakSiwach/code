@@ -1,0 +1,310 @@
+.room-page {
+  min-height: 100vh;
+  padding: 24px 20px 40px;
+}
+
+.room-header {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.room-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #0f172a;
+}
+
+.room-subtitle {
+  margin: 0;
+  max-width: 680px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.section-label {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.room-summary {
+  width: 360px;
+  display: grid;
+  gap: 14px;
+}
+
+.summary-box,
+.room-panel,
+.video-panel {
+  background-color: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.summary-box span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.summary-box input,
+.room-panel select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.room-id-row {
+  display: flex;
+  gap: 10px;
+}
+
+.room-id-row button,
+.video-actions button,
+.room-panel .run-btn {
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active-room-text {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.toggle-row {
+  display: grid;
+  gap: 8px;
+}
+
+.toggle-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+}
+
+.room-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.room-main,
+.room-side {
+  display: grid;
+  gap: 20px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.room-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.video-status {
+  margin: 0 0 16px;
+  color: #475569;
+}
+
+.participant-strip {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.participant-chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background-color: #f8fafc;
+  border: 1px solid #dbe3ef;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.video-card {
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8fafc;
+}
+
+.video-card p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.video-card video,
+.video-placeholder {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  background-color: #0f172a;
+  object-fit: cover;
+}
+
+.video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px;
+}
+
+.meeting-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.meeting-count {
+  color: #475569;
+  font-size: 14px;
+}
+
+.video-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.video-actions button:disabled,
+.room-panel .run-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.room-panel .language-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.room-editor {
+  margin-bottom: 16px;
+}
+
+.room-editor .editor-wrapper {
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.room-output .output-panel {
+  padding: 0;
+  border: none;
+}
+
+.room-output .output-box {
+  min-height: 220px;
+  border-radius: 10px;
+}
+
+.room-chat .app-shell {
+  min-height: 720px;
+}
+
+.room-chat .chat-window {
+  min-height: 720px;
+}
+
+.room-chat .name-popup-overlay {
+  position: absolute;
+}
+
+@media (max-width: 1024px) {
+  .room-header,
+  .room-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .room-summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .room-page {
+    padding: 18px 14px 28px;
+  }
+
+  .room-header h1 {
+    font-size: 28px;
+  }
+
+  .room-id-row,
+  .meeting-footer,
+  .panel-head,
+  .video-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .room-panel .language-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .video-card video,
+  .video-placeholder {
+    height: 200px;
+  }
+
+  .room-chat .app-shell,
+  .room-chat .chat-window {
+    min-height: 560px;
+  }
+}

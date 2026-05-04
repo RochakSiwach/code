@@ -1,0 +1,138 @@
+.code-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 40px;
+}
+
+.code-header {
+  margin-bottom: 24px;
+}
+
+.code-tag {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.code-header h1 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  color: #111827;
+}
+
+.code-subtitle {
+  margin: 0;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.code-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.editor-panel,
+.output-panel {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.editor-toolbar,
+.output-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.editor-toolbar h2,
+.output-topbar h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-selector label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.language-selector select {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.editor-wrapper {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.run-btn {
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.run-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.output-box {
+  min-height: 500px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #111827;
+  color: #f9fafb;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.output-box.error {
+  color: #fca5a5;
+}
+
+@media (max-width: 900px) {
+  .code-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .code-header h1 {
+    font-size: 28px;
+  }
+
+  .editor-toolbar,
+  .output-topbar,
+  .language-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .output-box {
+    min-height: 240px;
+  }
+}
